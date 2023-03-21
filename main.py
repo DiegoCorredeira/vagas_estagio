@@ -10,7 +10,18 @@ Adicionar aba com link da vaga
 Implementar sistema de envio de email
 Mensagem do email: 'Olá, fulano! Sua atualização diaria de vagas de estágio chegou! Venha dar uma olhada.'
 '''
-URL_LINKEDIN_JOBS = 'https://www.linkedin.com/jobs/search?keywords=Est%C3%A1gio%20De%20TI&location=Brasil&locationId=&geoId=106057199&f_TPR=r86400&position=1&pageNum=0'
+
+'''
+Em busca da facilidade de buscar outras vagas além de estágio em TI
+adicionei essa implementação onde através dessas varáveis você consegue
+gerar o link de maneira mais eficaz - João Pedro Dutra
+'''
+
+keyword = "Estagio em TI" # Nome da vaga que busca - João Pedro Dutra
+location = "Brasil" # Localidade da vaga que busca - João Pedro Dutra
+geoid = "106057199" # Variável fixa enquanto focar apenas no Brasil - João Pedro Dutra
+
+URL_LINKEDIN_JOBS = f"https://www.linkedin.com/jobs/search/?geoId={geoid}&keywords={keyword}&location={location}&refresh=true"
 
 if __name__ == '__main__':
     driver = webdriver.Chrome(ChromeDriverManager().install())
