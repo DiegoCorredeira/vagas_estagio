@@ -54,12 +54,6 @@ if __name__ == '__main__':
                 print('Vaga salva com sucesso!')
             except:
                 print("Erro ao capturar dados da vaga selecionada")
-        try:
-            results = driver.find_elements_by_class_name('base-card')
-        except:
-            driver.find_element_by_xpath(
-                '//*[@id="main-content"]/section[2]/button').click()
-            results = driver.find_elements_by_class_name('base-card')
 
         if len(descricao) == len(results):
             break
