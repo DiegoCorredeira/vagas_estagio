@@ -44,3 +44,10 @@ O código faz isso para todas as vagas disponíveis na página de busca atual. Q
     O script pode demorar para ser executado, dependendo do número de vagas de emprego disponíveis na pesquisa.
 
 Espero que esta documentação seja útil para você. Se você tiver alguma dúvida ou precisar de mais ajuda, sinta-se à vontade para perguntar.
+
+
+<table>
+    <h4>Contribuidor</h4>
+  <tr>
+    <td align="center"><a href="https://github.com/jpdutraa"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/91329576?v=4" width="100px;" alt=""/><br /><sub><b>João Pedro Dutra</b></sub></a><br/>👨🏻‍💻</a></td>
+    </tr>
