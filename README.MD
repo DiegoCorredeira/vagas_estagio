@@ -1,7 +1,7 @@
 # Documentação do Projeto - Estágios de TI no LinkedIn
 
 ## Introdução
-Este projeto tem como objetivo capturar informações sobre vagas de estágio na área de Tecnologia da Informação (TI) no LinkedIn, tais como título da vaga, empresa contratante, local da vaga e descrição da vaga. A partir dessas informações, serão gerados dois arquivos de saída: um arquivo de texto com as descrições das vagas e um arquivo Excel com todas as informações coletadas.
+Este projeto tem como objetivo capturar informações sobre vagas de estágio na área de Tecnologia da Informação (TI) no LinkedIn, tais como título da vaga, empresa contratante, local da vaga, link e descrição da vaga. A partir dessas informações, será gerado um arquivo de saída: Um arquivo Excel com todas as informações coletadas.
 
 ## Instalação
 Para executar o código, é necessário ter o Python e algumas bibliotecas instaladas. As bibliotecas necessárias são:
