@@ -6,7 +6,6 @@ import pandas as pd
 
 '''
 Proximos passos: 
-Adicionar aba com link da vaga 
 Implementar sistema de envio de email
 Mensagem do email: 'Olá, fulano! Sua atualização diaria de vagas de estágio chegou! Venha dar uma olhada.'
 '''
@@ -19,16 +18,19 @@ if __name__ == '__main__':
     driver.get(URL_LINKEDIN_JOBS)
 
     results = driver.find_elements_by_class_name('base-card')
+    links = driver.find_elements_by_class_name('base-card')
 
     descricao = []
     empresa = []
     local = []
     titulo = []
+    job_links = [link.get_attribute('href') for link in links]
+
 
     while True:
         for result in results[len(descricao):]:
             result.click()
-            sleep(7)
+            sleep(15)
             try:
                 descricao.append(
                     driver.find_element_by_class_name('description').text)
@@ -50,6 +52,8 @@ if __name__ == '__main__':
 
         if len(descricao) == len(results):
             break
+    
+
 
     driver.quit()
 
@@ -57,7 +61,8 @@ if __name__ == '__main__':
         'Título': titulo,
         'Empresa': empresa,
         'Local da Vaga': local,
-        'Descrição': descricao
+        'Descrição': descricao, 
+        'Link': job_links
         }
     df = pd.DataFrame(dados_coletados)
     print(df.head())
