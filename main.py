@@ -6,8 +6,10 @@ import pandas as pd
 
 '''
 Proximos passos: 
-Implementar sistema de envio de email
-Mensagem do email: 'Olá, fulano! Sua atualização diaria de vagas de estágio chegou! Venha dar uma olhada.'
+- Ajustar o arquivo excel das vagas para a visualização ficar melhor.
+- Adicionar cartela de "clientes" para envio de email em massa
+- 
+
 '''
 
 '''
@@ -25,7 +27,6 @@ URL_LINKEDIN_JOBS = f"https://www.linkedin.com/jobs/search/?geoId={geoid}&keywor
 if __name__ == '__main__':
     driver = webdriver.Chrome(ChromeDriverManager().install())
     driver.maximize_window()  
-
     driver.get(URL_LINKEDIN_JOBS)
 
     results = driver.find_elements_by_class_name('base-card')
@@ -35,6 +36,7 @@ if __name__ == '__main__':
     empresa = []
     local = []
     titulo = []
+    sleep(15)
     job_links = [link.get_attribute('href') for link in links]
 
 
