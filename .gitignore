@@ -3,5 +3,10 @@
 
 ### dotenv ###
 .env
+.idea
+venv
 
 # End of https://www.toptal.com/developers/gitignore/api/dotenv
+teste.py
+vagas.xlsx
+vagas.xlsx
